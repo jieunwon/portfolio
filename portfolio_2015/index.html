@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <meta charset="utf-8">
+	    <title>JIEUN WON | FRONT END DEVELOPER</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link href="css/normalize.css" rel="stylesheet">
+      <link rel="icon" type="image/png" href="favicon.ico">
+
+      <!-- FONT & FONT AWESOME ICON -->
+      <link rel="stylesheet" href="css/font-awesome.css">      
+      <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Petit+Formal+Script' rel='stylesheet' type='text/css'>
+      
+      <!--MISC FOR PINTEREST THEME-->
+      <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+      <link href="css/style.css" rel="stylesheet">
+
+      <!-- FANCY BOX -->
+      <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+      <!-- Add mousewheel plugin (this is optional) -->
+      <script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+
+      <!-- Add fancyBox -->
+      <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" />
+      <script type="text/javascript" src="js/jquery.fancybox.js"></script>
+      <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+
+      <!-- Optionally add helpers - button, thumbnail and/or media -->
+      <link rel="stylesheet" href="css/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+      <script type="text/javascript" src="js/jquery.fancybox-buttons.js"></script>
+      <script type="text/javascript" src="js/jquery.fancybox-media.js"></script>
+
+      <link rel="stylesheet" href="css/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+      <script type="text/javascript" src="js/jquery.fancybox-thumbs.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function() {
+            $(".fancybox").fancybox();
+
+            $(".single").fancybox({
+               helpers: {
+                  title : {
+                     type : 'float'
+                  }
+               }
+            });
+
+            $('.fancybox-buttons1').fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+
+                prevEffect : 'none',
+                nextEffect : 'none',
+
+                closeBtn  : false,
+
+                helpers : {
+                  title : {
+                    type : 'inside'
+                  },
+                  buttons : {}
+                },
+
+                afterLoad : function() {
+                  this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+                }
+            });
+
+         });
+      </script> 
+      <script src="js/colorFlow.js"></script>
+
+   </head>
+    
+   <body>
+      <!--   LOGO     -->
+      <header class="header">
+        <a href="index.html"><p style="color: #fff;">Jieun Won</p></a>
+        <a href="index.html"><h5 style="color: #fff;">&lcub; Design + Development &rcub;</h5></a>
+        <a href="https://dl.dropboxusercontent.com/u/33350931/Resume_JieunWon_2016.pdf" target="_new"><span class="fa fa-download" id="download" style="color: #fff; margin-top: 30px; margin-left: 70%;"><span>
+   Résumé</span></span></a>   
+      </header>
+      <!--   NAVIGATION  -->
+      <!--<nav>
+         <ul>
+      	    <li><a href="aboutus.html"><span class="fa fa-info-circle"></span>   about me</a></li>
+      		  <li><a href="menu.html"><i class="fa fa-download"></i>   resume</a></li>
+            <li><a href="news.html"><i class="fa fa-linkedin-square"></i>   linkedin</a></li>
+      		  <li><a href="news.html"><span class="fa fa-phone"></span>   contact</a></li>
+       	 </ul>
+      </nav>-->
+      <!--   BOXES    -->       
+      <div class="container marketing" style="margin-top: -20px;">
+         <section id="blog-landing">
+
+           <!-- LABORATORIO OLFATTIVO  -->
+           <article class="white-panel">
+              <a href="img/laboratorio_thumb.png" class="fancybox-buttons1" data-fancybox-group="button" data-fancybox-type="image" rel="gallery1" target="_new"><a href="laboratorio/index.html"><img src="img/laboratorio_thumb.png" alt="Laboratorio Olfattivo"></a></a>
+              <p align="center"><a href="laboratorio/index.html" target="_new" class="open_notice"><i class="fa fa-external-link" class="open_notice"></i>Please open with Chrome</a></p>
+           </article> 
+
+
+           <!--   Camellia Vintage --> 
+            <article class="white-panel">
+               <a class="fancybox-buttons1" href="img/CM_1.png" data-fancybox-group="button" rel="gallery1" data-fancybox-type="image"><img src="img/camellia_thumb.png" alt="camellia vintage store campaign"></a>
+               <a class="fancybox-buttons1" href="img/CM_2.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/CM_2.png" alt="camellia vintage store campaign" style='display:none;'/></a>
+               <a class="fancybox-buttons1" href="img/CM_3.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/CM_3.png" alt="camellia vintage store campaign" style='display:none;' /></a>
+               <!--<h1 style='margin-left: 20px;'><a href="#">Design</a></h1>
+               <p style='margin-left: 20px;'>Camellia Vintage Clothing</p>-->
+            </article>
+
+            <!-- Eggyolk Brooklyn -->
+           <article class="white-panel">
+              <a href="img/eggyolk_thumb.png" class="fancybox-buttons1" data-fancybox-group="button" data-fancybox-type="image" rel="gallery1" target="_new"><a href="eggyolk/index.html"><img src="img/eggyolk_thumb.png" alt="Egg Yolk Brooklyn"></a></a>
+              <p align="center"><a href="eggyolk/index.html" target="_new" class="open_notice"><i class="fa fa-external-link" class="open_notice"></i>Please open with Chrome</a></p>
+           </article> 
+
+            <!-- Nooka Watch  -->
+            <article class="white-panel">
+               <a class="fancybox-buttons1" data-fancybox-group="button" data-fancybox-type="image" rel="gallery1" href="img/futurewatch_Web.jpg"><img src="img/futurewatch_Web_thumb.png" alt="nookawatch"></a>
+               <!--<h1><a href="#">Design</a></h1>
+               <p>Nooka Watch</p>-->
+            </article>
+
+            <!-- Celestial Seasoning -->
+            <article class="white-panel">
+               <a class="fancybox-buttons1" href="img/Celestial_lemon.png" data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/Celestial_lemon_thumb.png" alt="celestial seasoning lemon"></a>
+               <a class="fancybox-buttons1" href="img/Celestial_apple.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/Celestial_apple.png" alt="celestial seasoning apple" style='display:none;'/></a>
+               <a class="fancybox-buttons1" href="img/Celestial_orange.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/Celestial_orange.png" alt="celestial seasoning orange" style='display:none;' /></a>
+               <!--<h1><a href="#">Design</a></h1>
+               <p>Celestial Seasoning Tea</p>-->
+            </article>
+
+            <!--Garmin GPS -->
+            <article class="white-panel">
+               <a class="fancybox-buttons1" href="img/Garmin1.png" data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/Garmin1_thumb.png" alt="garmin gps"></a>
+               <a class="fancybox-buttons1" href="img/Garmin2.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/Garmin2.png" alt="garmin gps" style='display:none;'/></a>
+               <a class="fancybox-buttons1" href="img/Garmin3.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/Garmin3.png" alt="garmin gps" style='display:none;' /></a>
+               <!--<h1><a href="#">Design</a></h1>
+               <p>Celestial Seasoning Tea</p>-->
+            </article>
+
+            <!-- Timberland  -->
+            <article class="white-panel">
+               <a class="fancybox-buttons1" data-fancybox-group="button" data-fancybox-type="image" href="img/timberland.png" rel="gallery1"><img src="img/timberland_thumb.png" alt="Timberland"></a>
+               <!--<h1><a href="#">Design</a></h1>
+               <p>Nooka Watch</p>-->
+            </article>
+
+
+           <!--M E M P H I S -->
+           <article class="white-panel">
+              <a class="fancybox-buttons1" href="img/memphis1.jpg" data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/memphis1_thumb.png" alt="Memphis"></a>
+              <a class="fancybox-buttons1" href="img/memphis2.jpg"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/memphis2.jpg" alt="" style='display:none;'/></a>
+              <a class="fancybox-buttons1" href="img/memphis3.jpg"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/memphis3.jpg" alt="" style='display:none;' /></a>
+              <!--<h1><a href="#">Design</a></h1>
+              <p>Celestial Seasoning Tea</p>-->
+           </article>
+
+           <!-- D I N E R  -->
+           <article class="white-panel">
+              <a class="fancybox-buttons1" data-fancybox-group="button" data-fancybox-type="iframe" href="https://player.vimeo.com/video/36038215" id="vimeo" rel="gallery1"><img src="img/Diner_thumb.png" alt="diner" /></a>
+           <!--<h1><a href="#">Design</a></h1>
+           <p>Nooka Watch</p>-->
+           </article>
+
+           <!-- S T R E E T C A R -->
+           <article class="white-panel">
+              <a class="fancybox-buttons1" href="img/streetcar1.jpg" data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/streetcar1_thumb.png" alt="streetcar poster"></a>
+              <a class="fancybox-buttons1" href="img/streetcar2.jpg"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/streetcar2.jpg" alt="streetcar" style='display:none;' /></a>
+           <!--<h1><a href="#">Design</a></h1>
+           <p>Celestial Seasoning Tea</p>-->
+           </article>
+
+           <!-- SPY exhibition  -->
+           <article class="white-panel">
+              <a href="img/spy.jpg" class="fancybox-buttons1" data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/spy_thumb.png" alt="spy"></a>
+              <!--<h1><a href="#">Design</a></h1>
+              <p>Nooka Watch</p>-->
+           </article>
+
+           <!-- F A I R Y T A L E -->
+           <article class="white-panel">
+             <!-- <a class="fancybox-buttons1" href="img/fairytalemockup.png" data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/fairytalemockup_thumb.png" alt="Fairytale Recipe"></a>
+             <a class="fancybox-buttons1" href="img/website_screenshot2.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/website_screenshot2.png" alt="" style='display:none;'/></a>
+             <a class="fancybox-buttons1" href="img/website_screenshot3.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/website_screenshot3.png" alt="" style='display:none;' /></a>
+             <a class="fancybox-buttons1" href="img/web_sc4.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/web_sc4.png" alt="" style='display:none;' /></a>
+             <a class="fancybox-buttons1" href="img/web_sc5.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/web_sc5.png" alt="" style='display:none;' /></a>
+             <a class="fancybox-buttons1" href="img/web_sc6.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/web_sc6.png" alt="" style='display:none;' /></a>
+             <a class="fancybox-buttons1" href="img/web_sc8.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/web_sc8.png" alt="" style='display:none;' /></a>
+             <a class="fancybox-buttons1" href="img/web_sc11.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/web_sc11.png" alt="" style='display:none;' /></a>
+             <a class="fancybox-buttons1" href="img/web_sc14.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/web_sc14.png" alt="" style='display:none;' /></a>
+             <a class="fancybox-buttons1" href="img/web_sc15.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/web_sc15.png" alt="" style='display:none;' /></a>
+             <a class="fancybox-buttons1" href="img/web_sc20.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/web_sc20.png" alt="" style='display:none;' /></a>
+             <a class="fancybox-buttons1" href="img/web_sc21.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/web_sc21.png" alt="" style='display:none;' /></a>
+             <a class="fancybox-buttons1" href="img/web_sc22.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/web_sc22.png" alt="" style='display:none;' /></a>
+             <a class="fancybox-buttons1" href="img/web_sc23.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/web_sc23.png" alt="" style='display:none;' /></a>
+             <a class="fancybox-buttons1" href="img/fairytalemockup2.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/fairytalemockup2.png" alt="" style='display:none;' /></a> -->
+
+              <a href="img/fairytalemockup.png" class="fancybox-buttons1" data-fancybox-group="button" data-fancybox-type="image" rel="gallery1" target="_new"><a href="FairyTale_Recipes_3/index.html"><img src="img/fairytalemockup.png" alt="FairyTale Recipe"></a></a>
+              <p align="center"><a href="FairyTale_Recipes_3/index.html" target="_new" class="open_notice"><i class="fa fa-external-link" class="open_notice"></i>Please open with Chrome</a></p>       
+           </article>
+
+           
+           <!-- M A G N O L I A -->
+           <article class="white-panel"><a class="fancybox-buttons1" href="img/magnoliamockup1.png" data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/magnoliamockup1_thumb.png" alt="Magnolia Bakery Website"></a>
+           <a class="fancybox-buttons1" href="img/magnoliaipad.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/magnoliaipad.png" alt="" style='display:none;'/></a>
+           <a class="fancybox-buttons1" href="img/magnoliaMobile.png"  data-fancybox-group="button" data-fancybox-type="image" rel="gallery1"><img src="img/magnoliaMobile.png" alt="" style='display:none;' /></a>
+             <!--  <h1 align="center"><a href="#">Development</a></h1>
+              <p align="center">Magnolia Bakery</p> -->
+           </article>
+
+         
+         </section>
+      </div>
+
+      <!--   FOOTER   -->
+      <footer>
+         <p>Copyright &copy; 2016 jieunwon.com, All rights reserved.</p>
+      </footer>
+
+
+
+      
+      <script>
+          $('body').colorFlow({
+              background: ['#85144b', '#F012BE', '#FFBC00', '#7FDBFF', '#01FF70'],
+              text: ['#CF5D94', '#EFA9FA', '#665800', '#004966', '#00662C'],
+              time: 25
+          });
+      </script>
+
+      
+       
+      <!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+
+      <script src="js/pinterest_grid.js"></script> 
+      <script>
+
+              $(document).ready(function() {
+
+                  $('#blog-landing').pinterest_grid({
+                      no_columns: 4,
+                      padding_x: 10,
+                      padding_y: 10,
+                      margin_bottom: 50,
+                      single_column_breakpoint: 700
+                  });
+
+              });
+      </script>
+      <script type="text/javascript">
+         var _gaq = _gaq || [];
+         _gaq.push(['_setAccount', 'UA-36251023-1']);
+         _gaq.push(['_setDomainName', 'jqueryscript.net']);
+         _gaq.push(['_trackPageview']);
+
+         (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+         })();
+      </script>
+   </body>
+</html>

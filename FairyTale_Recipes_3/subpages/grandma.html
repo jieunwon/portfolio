@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+	  <title>Grandma's House</title>
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	  <meta name="viewport" content="width=700" />
+
+	  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+	  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic|Josefin+Slab:400,700,700italic' rel='stylesheet' type='text/css'>
+
+	  <link rel="stylesheet" href="../css/normalize.css" type="text/css">
+	  <link rel="stylesheet" href="../css/global_style.css" type="text/css">
+	  <link rel="stylesheet" href="../css/grandma.css" type="text/css">
+	  <link rel="stylesheet" href="../css/animate.css" type="text/css">
+
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	  <script type="text/javascript" src="../js/_examples/modernizr.custom.min.js"></script>
+	  <script type="text/javascript" src="../js/_dependent/greensock/TweenMax.min.js"></script>
+	  <script type="text/javascript" src="../js/_dependent/greensock/plugins/ScrollToPlugin.min.js"></script>
+  	  <script type="text/javascript" src="../js/jquery.scrollmagic.min.js"></script>
+  	  <script type="text/javascript" src="../js/_examples/demo.js"></script>
+   </head>
+   <body>
+      <div id="content-wrapper">
+	     <!-- A U D I O   P L A Y E R -->
+		 <audio id="myAudio">
+		    <source src="../assets/music/grandma.mp3" type='audio/mp3'>
+			<source src="../assets/music/grandma.mp3" type='audio/ogg'>
+			Your user agent does not support the HTML5 Audio element.
+		 </audio>
+		 <div id="audio_player">
+			<img src="../assets/music/music_note.png" width="20px" height="20px" id="music_note">
+			<input type="image" src="../assets/music/pauseover.png" alt="Submit" width="20px" height="20px" onclick="aud_play_pause()" id="pause_button">
+		 </div>
+		 <script>
+			myAudio.play();
+			function aud_play_pause() {
+			   var myAudio = document.getElementById("myAudio");
+			   if (myAudio.paused) {
+			      myAudio.play();
+				  $("#pause_button").attr("src", "../assets/music/pauseover.png");
+			   }
+			   else {
+			      myAudio.pause();
+				  $("#pause_button").attr("src", "../assets/music/playover.png");
+			   }
+			}
+		 </script>
+		 <img src="../assets/grandma/garland.png" id="garland1">
+		 <img src="../assets/grandma/garland.png" id="garland2">
+	     <script type="text/javascript">
+	  	    var controller;
+	  		if (Modernizr.touch) {
+	  		   var myScroll;
+	  		   $(document).ready(function () {
+	  		      // wrap for iscroll
+		  		  $("#content-wrapper")
+		  		     .addClass("scrollContainer")
+		  		     .wrapInner('<div class="scrollContent"></div>');
+
+		  			 // add iScroll
+	  				 myScroll = new IScroll('#content-wrapper', {scrollX: false, scrollY: true, scrollbars: true, useTransform: false, useTransition: false, probeType: 3});
+					
+	  				 // update container on scroll
+					 myScroll.on("scroll", function () {
+					    controller.update();
+					 });
+
+					 // overwrite scroll position calculation to use child's offset instead of parents scrollTop();
+					 controller.scrollPos(function () {
+					    return -myScroll.y;
+					 });
+
+					 // refresh height, so all is included.
+					 setTimeout(function () {
+					    myScroll.refresh();
+					 }, 0);
+
+	  				 $("#content-wrapper").on("touchend", "a", function (e) {
+	  					// a bit dirty workaround for links not working in iscroll for some reason...
+	  					e.preventDefault();
+	  					window.location.href = $(this).attr("href");
+	  				 });
+
+					 // manual set hight (so height 100% is available within scroll container)
+		  			 $(document).on("orientationchange", function () {
+			  			$("section")
+			  			   .css("min-height", $(window).height())
+			  			   .parent(".scrollmagic-pin-spacer").css("min-height", $(window).height());
+		  			 });
+		  			 $(document).trigger("orientationchange"); // trigger to init
+	  		   });
+	  		   // init the controller
+	  		   controller = new ScrollMagic({
+		  	      container: "#content-wrapper",
+		  		  globalSceneOptions: {
+		  		     triggerHook: "onLeave"
+		  		  }
+		  	   });
+	  		}
+			else {
+	  		   // init the controller
+		  	   controller = new ScrollMagic({
+		  	      globalSceneOptions: {
+				     triggerHook: "onLeave"
+		  		  }
+		  	   });
+			}
+	  	 </script>
+		 <section id="start">
+		    <div id="intro">
+			   <img class="floor" src="../assets/sparks/demo_floor.png">
+			   <h1>Welcome to the Party!</h1>
+			   <img class="threebears" src="../assets/grandma/grandma.png">
+			   <img class="wand" src="../assets/sparks/demo_wand.png">
+			   <div class="sparkpoint"></div>
+			</div>
+			<script type="text/javascript" src="../js/threebears.js"></script>
+		 </section>
+		 <p id="summary">Grandma Bear is really happy to see Red Riding Hood Bear and her basket of food. "I want to share the food! Let's invite Mother Bear, The Three Bears, Gingerbread Man, Little Red Hen and her Chicks!" Said Grandma Bear. They all eat the food and have a wonderful time together.</p>
+		 
+		 <img src="../assets/grandma/balloon.png" id="balloon1">
+		 <img src="../assets/grandma/balloon.png" id="balloon2">
+		 <img id="image" class="imgDisplayoff" src="../assets/grandma/Last_background.png" />
+		 <p id="theend">And They lived Happily Ever After..</p>
+		 <div id="grandma_buttons">
+		    <ul>
+		   	   <a href="gingerbreadman.html"><li class="btn">PREVIOUS</li></a>
+		       <a href="../index.html"><li class="btn">HOME</li></a>
+		    </ul>
+		 </div>
+		 <script src='../js/snowfall.jquery.min.js'></script>
+		 <script>
+			 $(document).ready(function(){
+				 $(window).scroll(function(){
+					 if ($(window).scrollTop() > 1800){
+						 $('.imgDisplayoff').animate({"opacity":"1"},1000);
+					 }
+				 });
+				 $(document).snowfall({image :"../assets/grandma/flake.png", minSize: 10, maxSize:32});
+			 });
+         </script>
+   </body>
+</html>

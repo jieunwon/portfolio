@@ -1,0 +1,63 @@
+img.frame {
+    border: 5px solid #fff;
+    margin-top: 20px;
+}
+
+
+/* revolver examples */
+.revolver.container {
+    /*box-shadow: 0 0 8px rgba(0,0,0,0.9);*/
+    width: 960px;
+    height: 400px;
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.revolver.stack .slide {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.revolver.inline .slide {
+    margin: 0;
+    padding: 0;
+    position: static;
+}
+
+.revolver.reveal .slide {
+    height: 300px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 720px;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.float_right {
+    float: right;
+}
+
+@media all and (max-width: 800px) and (min-width: 200px) {
+
+    body {
+        margin: 0;
+        text-align: left;
+    }
+
+   
+
+    #wrapper. footer {
+        margin: 0;
+        width: 100%;
+    }
+
+   
+
+}

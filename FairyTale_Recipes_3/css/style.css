@@ -1,0 +1,359 @@
+body {
+   background: url("../assets/bg.png") repeat;
+   background-color: #fff;
+   color: blue;
+   font-family: "Josefin Slab", serif;
+   font-size: 0.938em;
+   overflow: hidden;
+   width: 100%;
+}
+
+h1 {
+   font-size: 50px;
+   font-weight: bold;
+   margin-bottom: 30px;
+   /*text-shadow:
+    2px 2px 0 transparent,
+    4px 4px 0 #101010;*/
+}
+
+p#intro {
+   line-height: 30px;
+   margin-left: -180px;
+   margin-bottom: 40px;
+   width: 500px;
+}
+
+a {
+   color: green;
+   text-decoration: none;
+   transition: color 0.2s;
+}
+
+a a:visited {
+   color: green;
+   text-decoration: none;
+   transition: color 0.2s;
+}
+
+a:active {
+   color: lightblue;
+}
+
+.big {
+   color: black;
+   display: block;
+   font-size: 2.813em;
+   font-weight: bold;
+   line-height: 1.3em;
+   margin-bottom: 10px;
+   text-shadow: 2px 2px 0 transparent, 4px 4px 0 #101010;
+}
+
+.wrapper div {
+   position: absolute;
+   z-index: 99998;
+}
+
+/*A U D I O  P L A Y E R*/
+#audio_player {
+   bottom: 10%;
+   display: block;
+   position: fixed;
+   right: 5%;
+   z-index: 9999997;
+}
+
+#music_note {
+   display: inline-block;
+   float: left;
+}
+
+#pause_button {
+   display: inline-block;
+   margin-left: 20px;
+}
+
+#pause_button:focus {
+   outline: 0;
+}
+
+/*N A V I G A T I O N*/
+nav {
+   margin: 0 auto;
+   margin-top: 1.5%;
+   position: relative;  
+   width: 1201px;
+   z-index: 9999998;
+}
+
+.ribbon:after, .ribbon:before {
+   border: 1.5em solid #DB481B;
+   content: "";
+   float: left;
+   margin-top: 0.3em;
+}
+
+.ribbon:after {
+   border-right-color: transparent;
+}
+
+.ribbon:before {
+   border-left-color: transparent;
+}
+
+.ribbon a:link, .ribbon a:visited {
+   color: #fff;
+   height: 3.5em;
+   float: left;
+   font-size: 1.2em;
+   font-weight: bold;
+   overflow: hidden;
+   text-decoration: none;
+}
+
+.ribbon span {
+   background: #e5592e;
+   display: inline-block;
+   line-height: 3em;
+   margin-top: 0.5em;
+   padding: 0 2em;
+   position: relative;
+   -webkit-transition: background-color 0.2s, margin-top 0.2s;
+   /* Saf3.2+, Chrome */
+   -moz-transition: background-color 0.2s, margin-top 0.2s;
+   /* FF4+ */
+   -ms-transition: background-color 0.2s, margin-top 0.2s;
+   /* IE10 */
+   -o-transition: background-color 0.2s, margin-top 0.2s;
+   /* Opera 10.5+ */
+   transition: background-color 0.2s, margin-top 0.2s;
+}
+
+.ribbon a:hover span {
+   background: #FFD204;
+   color: green;
+   margin-top: 0;
+}
+
+.ribbon span:before {
+   border-bottom: 0.5em solid #e5592e;
+   border-right: 0.5em solid #9B8651;
+   content: "";
+   left: 0;
+   position: absolute;
+   top: 3em;
+}
+
+.ribbon span:after {
+   border-bottom: 0.5em solid #e5592e;
+   border-left: 0.5em solid #9B8651;
+   content: "";
+   position: absolute;
+   right: 0;
+   top: 3em;
+}
+
+.sp-canvas {
+   background: url(../assets/path2.png);
+   background-repeat: no-repeat;
+   color: red;
+   height: 2500px;
+   position: fixed;
+   width: 2650px;
+   z-index: 1;
+}
+
+.arrow {
+   color: red;
+   display: inline-block;
+   margin-left: -20%;
+   position: relative;
+   text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+}
+
+.demo {
+   color: #fff;
+   font-size: 1.675em;
+   font-weight: bold;
+   top: -50px;
+   width: 800px;
+   z-index: 100;
+}
+
+.demo .arrow {
+   animation: point-down 0.5s alternate infinite;
+   font-size: 20px;
+}
+
+#arrowspan {
+   margin-left: -20px;
+}
+
+.description {
+   left: 180px;
+   top: 740px;
+   width: 440px;
+}
+
+.syntax {
+   left: 430px;
+   top: 1510px;
+   width: 400px;
+}
+
+.scrollbar {
+   left: 1600px;
+   top: 1540px;
+   width: 400px;
+}
+
+.rotations {
+   left: 2185px;
+   top: 660px;
+   width: 460px;
+   transform: rotate(-90deg) translateY(2.5em);
+}
+
+.rotations .upside-down {
+   font-size: 42px;
+   text-align: right;
+   transform: rotate(180deg) translateY(3em);
+}
+
+.source {
+   left: 2200px;
+   top: -800px;
+   width: 400px;
+   transform: rotate(90deg) translateX(50px);
+}
+
+.follow {
+   left: 1100px;
+   top: -950px;
+   transform: rotate(90deg) translateX(50px);
+   width: 475px;
+}
+
+.follow .big {
+   color: red;
+   font-size: 40px;
+}
+
+.highlight {
+   animation: highlight 0.2s alternate 6;
+}
+
+#redbear {
+   margin-left: 480px;
+   margin-top: -400px;
+}
+
+#marketplace {
+   margin-left: 350px;
+   margin-top: -170px;
+}
+
+#ornaments {
+   display: block;
+   margin-left: -180px;
+   margin-top: -200px;
+   position: absolute;
+   z-index: 13348;
+}
+
+#treehouse {
+   display: inline-block;
+   margin-left: -250px;
+   margin-top: -250px;
+   position: absolute;
+   z-index: 12343;
+}
+
+#bearmom {
+   display: inline-block;
+   margin-left: 250px;
+}
+
+#redhen_house {
+   margin-left: -350px;
+   margin-top: -150px;
+   position: absolute;
+   z-index: 12344;
+}
+
+#redhen {
+   margin-left: 50px;
+}
+
+#chicks {
+   margin-left: 30px;
+   margin-top: -400px;
+}
+
+#bear_house {
+   margin-left: -320px;
+   margin-top: -300px;
+   position: absolute;
+   z-index: 91253;
+}
+
+#threebears {
+   margin-left: 150px;
+   margin-top: -280px;
+}
+
+#babybear {
+   display: block;
+   margin-left: 150px;
+   margin-top: -400px;
+}
+
+#ginger_house {
+   margin-left: -600px;
+   margin-top: -60px;
+   position: absolute;
+   z-index: 12341;
+}
+
+#ginger {
+   margin-left: -150px;
+   margin-top: 100px;
+}
+
+#smoke {
+   display: block;
+   margin-left: -210px;
+   margin-top: -700px;
+}
+
+#grandma_house {
+   margin-left: -250px;
+   margin-top: -300px;
+}
+
+#grandma {
+   display: inline-block;
+   margin-left: 300px;
+   margin-top: -600px;
+}
+
+#start_line {
+   margin-left: -180px;
+   margin-top: -80px;
+}
+
+@keyframes point-down {
+   from {
+      top: 0;
+   }
+   to {
+      top: 5px;
+   }
+}
+
+@keyframes highlight {
+   to {
+      background: lightblue;
+   }
+}

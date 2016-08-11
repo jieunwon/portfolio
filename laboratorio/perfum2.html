@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+	   <title>Rosamunda | LABORATORIO OLFATTIVO</title>
+	   <link href="css/normalize.css" rel="stylesheet">
+      <link href="css/fragrances.css" rel="stylesheet"> 
+      
+      <link href='http://fonts.googleapis.com/css?family=Muli:300' rel='stylesheet' type='text/css'> 
+      <!-- JS -->
+      <script src="js/jquery-1.6.1.min.js"></script>
+      <script src="js/scroll_herbs.js"></script>
+      <script src="js/snap.svg-min.js"></script>
+   </head>
+    
+   <body>
+      <h1 id="small_logo">LABORATORIO OLFATTIVO</h1>
+      <nav id="menu" class="menu">
+         <button class="menu__handle"><span>Menu</span></button>
+         <div class="menu__inner">
+            <ul class="cl-effect-18">
+               <li><a href="index.html" data-hover="HOME"><span>HOME</span></a></li>
+               <li><a href="about.html" data-hover="ABOUT US"><span>ABOUT US</span></a></li>
+               <li><a href="fragrances.html" data-hover="FRAGRANCES"><span>FRAGRANCES</span></a></li>
+               <li><a href="contact.html" data-hover="CONTACT"><span>CONTACT</span></a></li>
+            </ul>
+         </div>
+         <div class="morph-shape" data-morph-open="M300-10c0,0,295,164,295,410c0,232-295,410-295,410" data-morph-close="M300-10C300-10,5,154,5,400c0,232,295,410,295,410">
+            <svg width="100%" height="100%" viewBox="0 0 600 800" preserveAspectRatio="none">
+               <path fill="none" d="M300-10c0,0,0,164,0,410c0,232,0,410,0,410"/>
+            </svg>
+         </div>
+      </nav>
+      <div id="wrap_out">
+         <div id='wrap'>
+            <h2 class="category_title" align="center">EAU DE PARFUM</h2>
+            <p class="intro">Rosamunda EAU DE PARFUM 100ml</p>
+            <p class="intro">The Nose Marie Duchêne</p>
+            <p class="intro">Creation 2012</p>
+            <p class="intro">Concentration 15%</p>
+
+            <h3 id="perfum_name" align="center">Rosamunda</h3> 
+
+            <!-- <img src="img/shelf.png" alt="shelf"> -->
+                
+            <section>
+               <div  id="rosamunda" class="element">
+                  <img src="img/rosamunda.png" alt="Rosamunda">
+               </div>
+               <div  id="roseleaves" class="element">
+                  <img src="img/roseleaves.png" alt="Lemonbalm">
+                   <!--  <p>Cinnamon is a spice obtained from the inner bark of the cinnamon tree. The spice is used in both sweet and savory foods, and it has bin prized for centuries not only for its unique flavor but also for aphrodisiac properties. Cinnamon has been known for centuries. Egyptians have used it since 2000 BC, but the spice probably originates from China. It belongs to one of the world's most healthiest foods, and was used since antiquity not only as an important ingredient of folk medicine, but also as an embalming agent.</p> -->
+               </div>
+               <div  id="rosemary" class="element">
+                  <!-- <img src="img/fir.png" alt="Rosemary">
+                  <p>Cras mattis consectetur purus sit amet fermentum. Cras mattis consectetur purus sit amet fermentum. Cras mattis consectetur purus sit amet fermentum.</p> -->
+               </div>
+               <div  id="saffron" class="element">
+                  <img src="img/saffron.png" alt="Amaryllis">
+                  <!-- <p>Cras mattis consectetur purus sit amet fermentum. Cras mattis consectetur purus sit amet fermentum. Cras mattis consectetur purus sit amet fermentum.</p> -->
+               </div>
+               <div  id="sandal" class="element">
+                  <img src="img/sandal.png" alt="Basil">
+                  <!-- <p>Cras mattis consectetur purus sit amet fermentum. Cras mattis consectetur purus sit amet fermentum. Cras mattis consectetur purus sit amet fermentum.</p> -->
+               </div>
+
+            </section>
+            <div id="description">
+               THE INSPIRATION<br><br>
+               Elegant in the sunlight , passionate when the night comes down. A rose difficult to be imprisoned in just one definition. Provocative and carnal like the roses on the hair of the feminine characters of Gabriel Garçia Marquez but, at the same time, sumptuous, wrapped in a neoclassical brightness.
+               <br><br><br>
+               THE FRAGRANCE<br><br>
+                
+               A large quantity of Bulgarian and Turkish roses  and long hours of distillation to get this creation: the seductive power of the rose is  brought to fever pitch and its being classic is corrupted with patchouli. Around this beating heart, illuminated by green lymph of rose, a scented scenario of golden spices, ancient woods and animal notes with an aphrodisiac imprint.  An impalpable landscape unknown to the eyes and to the nose,  a rose worthy of adoration for which a celebratory altar was built, an altar covered by oud, from which an essence with an immortal appeal  is extracted.
+               <br><br><br>
+               OLFACTORY PYRAMID<br><br>
+
+               Saffron, Rose leafs, 
+               Bulgarian Rose essence, Absolute of Turkish Rose, Patchouli
+               Oud, Cedar, Sandal, Amber, Animal musk
+            </div>
+         </div>
+      </div>  
+      <div id="button_container" align="center">
+         <a href="perfum1.html"><button class="buttons">PREV</button></a> 
+         <a href="fragrances.html"><button class="buttons">MENU</button></a>
+         <a href="perfum3.html"><button class="buttons">NEXT</button></a> 
+      </div>            
+      <footer class="footer">COPYRIGHT&copy; 2015 LABORATORIO OLFATTIVO</footer>
+      <script src="js/classie.js"></script>
+      <script>
+         (function() {
+
+            function SVGMenu( el, options ) {
+               this.el = el;
+               this.init();
+            }
+
+            SVGMenu.prototype.init = function() {
+               this.trigger = this.el.querySelector( 'button.menu__handle' );
+               this.shapeEl = this.el.querySelector( 'div.morph-shape' );
+
+               var s = Snap( this.shapeEl.querySelector( 'svg' ) );
+               this.pathEl = s.select( 'path' );
+               this.paths = {
+                  reset : this.pathEl.attr( 'd' ),
+                  open : this.shapeEl.getAttribute( 'data-morph-open' ),
+                  close : this.shapeEl.getAttribute( 'data-morph-close' )
+               };
+
+               this.isOpen = false;
+
+               this.initEvents();
+            };
+
+            SVGMenu.prototype.initEvents = function() {
+               this.trigger.addEventListener( 'click', this.toggle.bind(this) );
+            };
+
+            SVGMenu.prototype.toggle = function() {
+               var self = this;
+
+               if( this.isOpen ) {
+                  classie.remove( self.el, 'menu--anim' );
+                  setTimeout( function() { classie.remove( self.el, 'menu--open' ); }, 250 );
+               }
+               else {
+                  classie.add( self.el, 'menu--anim' );
+                  setTimeout( function() { classie.add( self.el, 'menu--open' ); }, 250 );
+               }
+               this.pathEl.stop().animate( { 'path' : this.isOpen ? this.paths.close : this.paths.open }, 350, mina.easeout, function() {
+                  self.pathEl.stop().animate( { 'path' : self.paths.reset }, 800, mina.elastic );
+               } );
+               
+               this.isOpen = !this.isOpen;
+            };
+
+            new SVGMenu( document.getElementById( 'menu' ) );
+
+         })();
+      </script>
+   </body>     
+</html>

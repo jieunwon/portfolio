@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+	  <title>Fairy Tale Cooking</title>
+
+	  <!--       C S S     -->
+	  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+	  <link rel="stylesheet" type="text/css" href="css/style.css">
+	  <link rel="stylesheet" type="text/css" href="css/scrollpath.css">
+	  <link rel="stylesheet" type="text/css" href="css/animate.css">
+
+	  <!--      F A V I C O N    -->
+	  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+
+	  <!--    F O N T -->
+	  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic|Josefin+Slab:400,700,700italic' rel='stylesheet' type='text/css'>
+
+	  <!-- S C R I P T -->
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	  <script type="text/javascript" src="js/prefixfree.min.js"></script>
+	  <!--[if lt IE 9]>
+	  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	  <![endif]-->
+   </head>
+
+   <body>
+
+      <!-- A U D I O   P L A Y E R -->
+      <audio id="myAudio">
+         <source src="assets/music/home.mp3" type='audio/mp3'>
+         <source src="http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.oga" type='audio/ogg; codecs=vorbis'>
+         Your user agent does not support the HTML5 Audio element.
+      </audio>
+	  <div id="audio_player">
+		 <img src="assets/music/music_note.png" width="20px" height="20px" id="music_note">
+	     <input type="image" src="assets/music/pauseover.png" alt="Submit" width="20px" height="20px" onclick="aud_play_pause()" id="pause_button">
+	  </div>
+	  <script>
+		 myAudio.play();
+		 function aud_play_pause() {
+		    var myAudio = document.getElementById("myAudio");
+			if (myAudio.paused) {
+			   myAudio.play();
+			   $("#pause_button").attr("src", "assets/music/pauseover.png");
+		    }
+			else {
+			   myAudio.pause();
+			   $("#pause_button").attr("src", "assets/music/playover.png");
+		    }
+	     }
+      </script>
+
+
+      <!-- N A V -->
+      <nav>
+	     <div class="ribbon">
+		    <a href="#start"><span class="show">Start</span></a>
+			<a href="#description"><span class="show">Market</span></a>
+			<a href="#syntax"><span class="show">Mother Bear</span></a>
+			<a href="#scrollbar"><span class="show">Red Hen</span></a>
+			<a href="#rotations-rotated"><span class="show">Three Bears</span></a>
+			<a href="#source"><span class="show">Gingerbread Man</span></a>
+			<a href="#follow"><span class="show">Grandma Bear</span></a>
+		 </div>
+	  </nav>
+
+
+	  <div class="wrapper">
+	     <!-- I N T R O -->
+		 <div class="demo">
+		    <h1 id="start_line">Red Riding Hood Bear</h1>
+			<p id="intro">Once upon a time there was a Red Riding Hood Bear. One morning she asked Mother Bear. "Can I go visit Grandma Bear?" "Yes. Grandma Bear is hungry so first our friends and I will make food for you to bring to her", said Mother Bear.</p>
+			<p id="intro">Now Red Riding Hood Bear needs your help. Can you help her make delicious food?</p>
+			<span class="arrow">&uarr; Click the navigation and visit her neighbors. &uarr;</span>
+			<img src="assets/redbear.png" width="450px" height="450px" id ="redbear" class="animated bounceInRight" />
+		 </div>
+
+		 <!-- M A R K E T P L A C E -->
+		 <div class="description">
+			<a href="subpages/marketplace.html">
+			   <img src="assets/marketplace/market.png" width="450px" height="450px" id ="marketplace" />
+			</a>
+			<!--<span class="big">Let's shop ingredients at MARKET PLACE</span>-->
+		 </div>
+
+		 <!-- M O M M Y  B E A R ' S  H O U S E -->
+		 <div class="syntax">
+		    <a href="subpages/redhood.html">
+			   <img src="assets/redhood/ornaments.png" width="500px" height="500px" id="ornaments" class="animated infinite fadeIn"/>
+			   <img src="assets/house-01.png" width="650px" height="650px" id="treehouse"/>
+			   <img src="assets/redhood/bearmom.png" width="400px" height="400px" id="bearmom"/>
+			</a>
+		 </div>
+
+		 <!-- R E D H E N ' S  H O U S E -->
+
+		 <div class="scrollbar">
+		    <a href="subpages/redhen.html" class="tip2">
+			   <img src="assets/house-03.png" width="550px" height="550px" id="redhen_house" /><img src="assets/redhen/redhen.png" width="400px" height="400px" id="redhen" /><img src="assets/redhen/chicks.png" width="400px" height="400px" id="chicks" class="animated infinite bounce" />
+			</a>
+			<!--<span class="big">BREAD</span>-->
+		 </div>
+
+		 <!-- T H R E E B E A R S '  H O U S E -->
+		 <div class="rotations">
+		    <a href="subpages/threebears.html">
+			   <img src="assets/house-04.png" width="550px" height="550px" id="bear_house" />
+			   <img src="assets/threebears/twobears.png" width="400px" height="400px" id="threebears" />
+			   <img src="assets/threebears/babybear.png" width="400px" height="400px" id="babybear" class="animated infinite pulse" />
+			</a>
+		 </div>
+
+		 <!-- G I N G E R B R E A D M A N ' S  H O U S E -->
+		 <div class="source">
+		    <a href="subpages/gingerbreadman.html"><img src="assets/house-05.png" width="550px" height="550px" id="ginger_house" /><img src="assets/gingerbreadman/gingerbreadman_H.png" width="350px" height="350px" id="ginger" class="animated infinite bounceInLeft"/></a>
+		 </div>
+
+		 <!-- G R A N D M A B E A R ' S  H O U S E -->
+		 <div class="follow">
+		    <a href="subpages/grandma.html">
+			   <img src="assets/house-02.png" width="600px" height="600px" id="grandma_house"/>
+			   <img src="assets/grandma/grandmaredhood.png" width="400px" height="400px" id="grandma" />
+			   <img src="assets/grandma/smoke.png" width="300px" height="300px" id="smoke" class="animated infinite bounce" />
+		    </a>
+	     </div>
+	  </div>
+
+	  <!--<script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>-->
+	  <!--Easing for navigation-->
+      <script type="text/javascript" src="js/jquery.easing.js"></script>
+	  <!--Scroll Path-->
+	  <script type="text/javascript" src="js/jquery.scrollpath.js"></script>
+	  <script type="text/javascript" src="js/home.js"></script>
+	  
+   </body>
+</html>

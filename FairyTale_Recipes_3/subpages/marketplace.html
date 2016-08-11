@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Market Place</title>
+      <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <!-- F A V I C O N -->
+      <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+
+      <!-- F O N T -->
+      <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic|Josefin+Slab:400,700,700italic' rel='stylesheet' type='text/css'>
+
+      <!-- C S S -->
+      <link rel="stylesheet" href="../css/normalize.css" type="text/css">
+      <link rel="stylesheet" href="../css/global_style.css" type="text/css">
+      <link rel="stylesheet" href="../css/marketplace.css" type="text/css">
+      <link rel="stylesheet" href="../css/animate.css" type="text/css">
+      <!-- J S -->
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+      <script type="text/javascript">
+         $( init );
+         function init() {
+            $('.makeMeDraggable').draggable();
+         }
+      </script>
+   </head>
+   <body>
+      <div class="wrapper">
+         <!-- A U D I O   P L A Y E R -->
+         <audio id="myAudio">
+            <source src="../assets/music/market.mp3" type='audio/mp3'>
+            Your user agent does not support the HTML5 Audio element.
+         </audio>
+         <div id="audio_player">
+            <img src="../assets/music/music_note.png" width="20px" height="20px" id="music_note">
+            <input type="image" src="../assets/music/pauseover.png" alt="Submit" width="20px" height="20px" onclick="aud_play_pause()" id="pause_button">
+         </div>
+         <script>
+            myAudio.play();
+            function aud_play_pause() {
+               var myAudio = document.getElementById("myAudio");
+               if (myAudio.paused) {
+                  myAudio.play();
+                  $("#pause_button").attr("src", "../assets/music/pauseover.png");
+               }
+               else {
+                  myAudio.pause();
+                  $("#pause_button").attr("src", "../assets/music/playover.png");
+               }
+            }
+         </script>
+         <div id="intro">
+            <h1>Before we start to cook, Drag Ingredients into the Basket!</h1>
+            <h2>If you miss something, don't worry. Her neighbors will help you.</h2>
+         </div>
+         <img src="../assets/marketplace/photos.png" id="photos"/>
+         <img src="../assets/marketplace/recipepaper.png" id="recipe">
+         <h2 id="pick">Pick ingredients you want, and drag them into the basket.</h2>
+         <div id="container">
+            <div class="makeMeDraggable" id="banana"><img src="../assets/marketplace/banana.png" width="200px"></div>
+            <div class="makeMeDraggable" id="water"><img src="../assets/marketplace/water.png" width="200px" /> </div>
+            <div class="makeMeDraggable" id="oatmeal"><img src="../assets/marketplace/oatmeal.png" width="200px"/> </div>
+            <div class="makeMeDraggable" id="honey"><img src="../assets/marketplace/honey.png" width="200px"/></div>
+            <div class="makeMeDraggable" id="salt"><img src="../assets/marketplace/salt.png" width="200px" /> </div>
+            <div class="makeMeDraggable" id="coolwhip"><img src="../assets/marketplace/ingredients.png" width="200px"></div>
+            <div class="makeMeDraggable" id="oliveoil"><img src="../assets/marketplace/oliveoil.png" width="200px"></div>
+            <div class="makeMeDraggable" id="angelcake"><img src="../assets/marketplace/ingredients2.png" width="200px"></div>
+            <div class="makeMeDraggable" id="sugar"><img src="../assets/marketplace/ingredients3.png" width="200px"></div>
+            <div class="makeMeDraggable" id="strawberries"><img src="../assets/marketplace/ingredients4.png" width="200px"></div>
+            <div class="makeMeDraggable" id="flour"><img src="../assets/marketplace/ingredients5.png" width="200px"></div>
+            <div class="makeMeDraggable" id="brownsugar"><img src="../assets/marketplace/ingredients6.png" width="200px"></div>
+            <div class="makeMeDraggable" id="egg"><img src="../assets/marketplace/ingredients7.png" width="200px"></div>
+            <div class="makeMeDraggable" id="butter"><img src="../assets/marketplace/ingredients8.png" width="200px"></div>
+            <div class="makeMeDraggable" id="candy"><img src="../assets/marketplace/ingredients9.png" width="200px"></div>
+         </div>
+         <img src="../assets/marketplace/basket.png" id="basket"/>
+         <div id="market_buttons">
+            <ul>
+               <a href="../index.html#market"><li class="btn">HOME</li></a>
+               <a href="redhood.html"><li class="btn">START</li></a>
+            </ul>
+         </div>
+      </div>
+      <script>
+         $('#banana').mouseover(function() {
+            $(this).addClass("animated swing");
+            $('#banana').mouseout(function(){
+               $(this).removeClass("animated swing");
+            });
+         });
+         $('#water').mouseover(function() {
+            $(this).addClass("animated tada");
+            $('#water').mouseout(function(){
+               $(this).removeClass("animated tada");
+            });
+         });
+         $('#oatmeal').mouseover(function() {
+            $(this).addClass("animated rotateIn");
+            $('#oatmeal').mouseout(function(){
+               $(this).removeClass("animated rotateIn");
+            });
+         });
+         $('#honey').mouseover(function() {
+            $(this).addClass("animated wobble");
+            $('#honey').mouseout(function(){
+               $(this).removeClass("animated wobble");
+            });
+         });
+         $('#salt').mouseover(function() {
+            $(this).addClass("animated pulse");
+            $('#salt').mouseout(function(){
+               $(this).removeClass("animated pulse");
+            });
+         });
+         $('#oliveoil').mouseover(function() {
+            $(this).addClass("animated shake");
+            $('#oliveoil').mouseout(function(){
+               $(this).removeClass("animated shake");
+            });
+         });
+         $('#water').mouseover(function() {
+            $(this).addClass("animated tada");
+            $('#water').mouseout(function(){
+               $(this).removeClass("animated tada");
+            });
+         });
+         $('#water').mouseover(function() {
+            $(this).addClass("animated rotateIn");
+            $('#water').mouseout(function(){
+               $(this).removeClass("animated rotateIn");
+            });
+         });
+         $('#strawberries').mouseover(function() {
+            $(this).addClass("animated tada");
+            $('#strawberries').mouseout(function(){
+               $(this).removeClass("animated tada");
+            });
+         });
+         $('#flour').mouseover(function() {
+            $(this).addClass("animated wobble");
+            $('#flour').mouseout(function(){
+               $(this).removeClass("animated wobble");
+            });
+         });
+         $('#brownsugar').mouseover(function() {
+            $(this).addClass("animated tada");
+            $('#brownsugar').mouseout(function(){
+               $(this).removeClass("animated tada");
+            });
+         });
+         $('#sugar').mouseover(function() {
+            $(this).addClass("animated tada");
+            $('#sugar').mouseout(function(){
+               $(this).removeClass("animated pulse");
+            });
+         });
+         $('#angelcake').mouseover(function() {
+            $(this).addClass("animated swing");
+            $('#angelcake').mouseout(function(){
+               $(this).removeClass("animated swing");
+            });
+         });
+         $('#coolwhip').mouseover(function() {
+            $(this).addClass("animated shake");
+            $('#coolwhip').mouseout(function(){
+               $(this).removeClass("animated shake");
+            });
+         });
+         $('#egg').mouseover(function() {
+            $(this).addClass("animated pulse");
+            $('#egg').mouseout(function(){
+               $(this).removeClass("animated pulse");
+            });
+         });
+         $('#candy').mouseover(function() {
+            $(this).addClass("animated tada");
+            $('#candy').mouseout(function(){
+               $(this).removeClass("animated tada");
+            });
+
+         });
+         $('#butter').mouseover(function() {
+            $(this).addClass("animated pulse");
+            $('#butter').mouseout(function(){
+               $(this).removeClass("animated pulse");
+            });
+            
+         });
+      </script>
+   </body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	  <meta name="viewport" content="width=700" />
+	  <title>Red Riding Hood</title>
+	  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+
+	  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic|Josefin+Slab:400,700,700italic' rel='stylesheet' type='text/css'>
+	  <link rel="stylesheet" href="../css/normalize.css" type="text/css">
+	  <link rel="stylesheet" href="../css/global_style.css" type="text/css">
+	  <link rel="stylesheet" href="../css/redhood.css" type="text/css">
+	  <link rel="stylesheet" href="../css/animate.css" type="text/css">
+
+	  <script type="text/javascript" src="../js/_dependent/greensock/TweenMax.min.js"></script>
+	  <script type="text/javascript" src="../js/_dependent/greensock/plugins/ScrollToPlugin.min.js"></script>
+	  <script type="text/javascript" src="../js/_dependent/jquery.min.js"></script>
+  	  <script type="text/javascript" src="../js/_examples/modernizr.custom.min.js"></script>
+  	  <script type="text/javascript" src="../js/jquery.scrollmagic.min.js"></script>
+  	  <script type="text/javascript" src="../js/_examples/demo.js"></script>
+   </head>
+   <body>
+      <div id="content-wrapper">
+		  <!-- A U D I O   P L A Y E R -->
+		  <audio id="myAudio">
+			  <source src="../assets/music/redhood.mp3" type='audio/mp3'>
+			  <source src="../assets/music/redhood.ogg" type='audio/ogg'>
+			  Your user agent does not support the HTML5 Audio element.
+		  </audio>
+		  <div id="audio_player">
+			  <img src="../assets/music/music_note.png" width="20px" height="20px" id="music_note">
+			  <input type="image" src="../assets/music/pauseover.png" alt="Submit" width="20px" height="20px" onclick="aud_play_pause()" id="pause_button">
+		  </div>
+		  <script>
+			  myAudio.play();
+			  function aud_play_pause() {
+				  var myAudio = document.getElementById("myAudio");
+				  if (myAudio.paused) {
+					  myAudio.play();
+					  $("#pause_button").attr("src", "../assets/music/pauseover.png");
+				  }
+				  else {
+					  myAudio.pause();
+					  $("#pause_button").attr("src", "../assets/music/playover.png");
+				  }
+			  }
+		  </script>
+
+		  <script type="text/javascript">
+	  	    var controller;
+	  		if (Modernizr.touch) {
+	  		   var myScroll;
+	  		   $(document).ready(function () {
+	  		      // wrap for iscroll
+		  		  $("#content-wrapper")
+		  				.addClass("scrollContainer")
+		  				.wrapInner('<div class="scrollContent"></div>');
+
+		  		  // add iScroll
+	  			  myScroll = new IScroll('#content-wrapper', {scrollX: false, scrollY: true, scrollbars: true, useTransform: false, useTransition: false, probeType: 3});
+					
+	  			  // update container on scroll
+				  myScroll.on("scroll", function () {
+						controller.update();
+					});
+
+					// overwrite scroll position calculation to use child's offset instead of parents scrollTop();
+					controller.scrollPos(function () {
+						return -myScroll.y;
+					});
+
+					// refresh height, so all is included.
+					setTimeout(function () {
+					    myScroll.refresh();
+					}, 0);
+
+	  				$("#content-wrapper").on("touchend", "a", function (e) {
+	  					// a bit dirty workaround for links not working in iscroll for some reason...
+	  					e.preventDefault();
+	  					window.location.href = $(this).attr("href");
+	  				});
+
+					// manual set hight (so height 100% is available within scroll container)
+		  			$(document).on("orientationchange", function () {
+			  			$("section")
+			  				.css("min-height", $(window).height())
+			  				.parent(".scrollmagic-pin-spacer").css("min-height", $(window).height());
+		  			});
+		  			$(document).trigger("orientationchange"); // trigger to init
+	  			});
+	  			// init the controller
+	  			controller = new ScrollMagic({
+		  			container: "#content-wrapper",
+		  			globalSceneOptions: {
+		  				triggerHook: "onLeave"
+		  			}
+		  		});
+	  		} else {
+	  			// init the controller
+		  		controller = new ScrollMagic({
+		  			globalSceneOptions: {
+		  				triggerHook: "onLeave"
+		  			}
+		  		});
+	  		}
+
+	  	 </script>
+		 <section id="start">
+			<div id="intro">
+				<img class="floor" src="../assets/sparks/demo_floor.png">
+				<h1>Mother Bear's Strawberry Cake</h1>
+				<img class="redhood" src="../assets/redhood/bearmom.png">
+				<img class="wand" src="../assets/sparks/demo_wand.png">
+				<div class="sparkpoint"></div>
+			</div>
+			<script type="text/javascript">
+			   // wrap each title letter
+			   $("#start h1").wrapEach(/(.)/g, "<span>$1</span>");
+
+			   // animations
+			   var nervousHat = new TimelineMax({repeat: -1, yoyo: true})
+			      .add(TweenMax.to("#start .redhood", 0.3, {bottom: "+=5", left: "-=6", rotation: -3}))
+			      .add(TweenMax.to("#start .redhood", 0.3, {bottom: "-=10", left: "+=6", rotation: 0}))
+				  .add(TweenMax.to("#start .redhood", 0.3, {bottom: "+=5", left: "+=6", rotation: 3}))
+				  .add(TweenMax.to("#start .redhood", 0.3, {bottom: "-=5", left: "-=3", rotation: 1.5}))
+				  .add(TweenMax.to("#start .redhood", 0.3, {bottom: "+=5", left: "-=6", rotation: -1.5}))
+				  .add(TweenMax.to("#start .redhood", 0.3, {bottom: "+=5", left: "+=3", rotation: 0}))
+				  .add(TweenMax.to("#start .redhood", 0.3, {bottom: "-=10"}));
+			   var abracadabra = TweenMax.fromTo("#start .wand", 1, {top: -$(window).height()/3, left: 370, rotation: 20}, {top: 10, rotation: -20});
+			   var reveal = new TimelineMax()
+			      .add([
+				     TweenMax.to("#start .redhood", 1, {bottom: $(window).height(), left: "-=50", rotation: -20}),
+					 TweenMax.from("#start h1", 1, {scale: 0.4, top: "+=70", delay: 0.1, autoAlpha: 0}),
+					 TweenMax.to("#start .wand", 0.8, {top: -$(window).height()/3, left: 450, rotation: 30}),
+					 TweenMax.to("#start .floor", 1, {autoAlpha: 0})
+				  ]);
+			   var laola = new TimelineMax()
+			      .add(TweenMax.staggerTo("#start h1 span", 0.5, {top: -20}, 0.2))
+				  .add(TweenMax.staggerTo("#start h1 span", 0.5, {top: 0}, 0.2), 0.5);
+
+			   // container pin
+			   var startpin = new ScrollScene({
+			      duration: 700
+			   })
+			      .setPin("section#start")
+				  .addTo(controller);
+
+			   // msg scroll ani
+			   new ScrollScene({
+			      duration: 140,
+				  offset: -100
+			   })
+			      .setTween(TweenMax.to("#msg div.scroll", 1, {backgroundPosition: "0 13px", repeat: -1, delay: 1, repeatDelay: 2, ease: Linear.easeNone}))
+				  .addTo(controller);
+			   // msg hide
+			   new ScrollScene({
+			      offset: 40
+			   })
+				  .setTween(TweenMax.to("#msg", 0.5, {bottom: -40}))
+				  .addTo(controller);
+
+			   // hat movement
+			   new ScrollScene({
+			      duration: 300,
+				  offset: -100
+			   })
+			      .setTween(nervousHat)
+				  .addTo(controller);
+
+			   // magic wand
+			   new ScrollScene({
+			      offset: 20,
+				  duration: 180
+			   })
+			      .on("end", function (e) {
+				     if (e.scrollDirection == "FORWARD" && startpin.progress() < 0.37) { // check pin progress so it doesnt launch on refresh
+					    // make it rain!
+						$("#start .sparkpoint").sparkle({
+						   amount: 40,
+						   duration: 0.2
+						});
+					 }
+				  })
+				  .setTween(abracadabra)
+				  .addTo(controller);
+
+			   // big reveal
+			   new ScrollScene({
+			      duration: 300,
+				  offset: 260
+			   })
+			      .setTween(reveal)
+				  .addTo(controller);
+
+			   // jumping text
+			   new ScrollScene({
+			      duration: 200,
+				  offset: 450
+			   })
+			      .setTween(laola)
+				  .addTo(controller);
+		    </script>
+		 </section>
+		 <h3 class="story_title">Little Red Riding Hood</h3>
+		 <p id="summary">Little Red Riding Hood lives at the edge of a wood.<br>One day, Mum sends her to
+		    Grandma’s with a <strong>cake</strong>, as Grandma isn’t feeling well. Mum tells Little Red Riding Hood
+		    to be very careful in the wood-she mustn’t leave the path or talk to strangers. Little
+		    Red Riding Hood puts on her red cloak, puts the cake in her basket, and promises to go
+		    straight to Grandma’s.
+		    In the wood, Little Red Riding Hood meets a wolf. The wolf stops her and asks her
+		    where she’s going. She tells the wolf she’s going to Grandma’s. Following the wolf’s
+		    suggestion, Little Red Riding Hood wanders off the path to pick some flowers for
+		    Grandma and the wolf runs straight to Grandma’s cottage.
+		    When the wolf arrives at the cottage he pretends he’s Little Red Riding Hood and
+		    swallows Grandma. He quickly puts on her nightdress and nightcap and jumps into bed
+		    to wait for an even tastier meal-Little Red Riding Hood.
+		    Little Red Riding Hood arrives at Grandma’s and notices what a big nose, big eyes, ears
+		    and teeth Grandma has got. She shouts for help and a woodcutter saves her from the
+		    wolf. Grandma jumps out of the wolf’s stomach and that’s the last they hear of the big,
+		    bad wolf! </p>
+		 <h2 class="lets">Let's make a Strawberry Cake!</h2>   
+		 <img id="final_food" src="../assets/redhood/strawberrycake.jpg" />
+		 <img class="steps" src="../assets/redhood/stepstrawberry.png" />
+		 <div id="buttons">
+		    <ul>
+		   	   <a href="marketplace.html"><li class="btn">PREVIOUS</li></a>
+		       <a href="../index.html"><li class="btn">HOME</li></a>
+		       <a href="redhen.html"><li class="btn">NEXT</li></a>
+		    </ul>
+         </div>
+   </body>
+</html>

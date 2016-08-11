@@ -1,0 +1,74 @@
+body {
+   background-color: #c7e1ff;
+}
+
+
+/*START*/
+
+
+#intro {
+	display: block;
+	width: 650px;
+	height: 400px;
+	top: 50%;
+	left: 50%;
+	margin: -200px auto auto -325px;
+	position: absolute;
+}
+#intro h1 {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	top: 130px;
+	margin: 0;
+	line-height: 100px;
+}
+#intro h1 span {
+	position: relative;
+	font-size: 70px;
+}
+#intro .redhen {
+	position: absolute;
+	left: 34%;
+	bottom: -60px;
+	margin-left: -144px;
+}
+#intro .floor {
+	position: absolute;
+	bottom: -15px;
+	left: 50%;
+	margin-left: -305px;
+}
+#intro .sparkpoint {
+	top: 60px;
+	left: 380px;
+}
+
+
+#heat {
+	bottom: 1200px;
+	width: 470px;
+	left: 46%;
+	opacity: 0.9;
+	position: relative;
+
+}
+
+#summary {
+   margin-top: 20px;
+   margin-bottom: 300px;
+   line-height: 30px;
+}
+
+
+#final_food {
+	margin-top: 100px;
+}
+
+.steps {
+	margin-bottom: 0;
+}
+
+#buttons {
+	margin-bottom: 0;
+}

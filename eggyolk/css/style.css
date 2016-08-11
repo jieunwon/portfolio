@@ -1,0 +1,507 @@
+body {
+   width: 100%;
+   margin: 0 auto;
+   display: block;
+   font-family: 'lora', serif;
+}
+
+header {
+   border-top: 5px solid #FECB00;
+}
+
+header h2:first-child {
+   text-align: center;
+   letter-spacing: 0.3em;
+   padding-top: 40px;
+   width: 200px;
+   display: block;
+   margin: 0 auto;
+   padding-bottom: 5px;
+   /*border-bottom: 1px solid #000;*/
+}
+
+.logo {
+            text-decoration: none;
+            color: #000;
+}
+
+h5 {
+  margin-top: 5px;
+  text-align: center;
+  letter-spacing: 0.4em;
+}
+    
+header {
+   height: 100px;
+   margin-bottom: 30px;
+} 
+
+
+#cartandlogin {
+   display: block;
+   width: 200px;
+   margin-top: 50px;
+   margin-left: 78%;
+   z-index: 100;
+   position: relative;
+}  
+
+#cart {
+   margin-right: 30px; 
+   padding-left: 5px;
+
+}
+
+i {
+   color: #000;
+}
+
+i#cart:hover, i#logout:hover, i#login:hover  {
+   color: #FECB00 ;
+}
+
+
+
+
+
+
+
+
+/* N A V I G A T I O N */
+
+nav ul,
+nav li,
+nav span,
+nav a {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+nav {
+  /*line-height: 1;*/
+  /*border-radius: 5px 5px 0 0;*/
+  /*-moz-border-radius: 5px 5px 0 0;*/
+  /*-webkit-border-radius: 5px 5px 0 0;*/
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #ffffff));
+  background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+  background: -o-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+  background: -ms-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+  border-bottom: 1px solid #FECB00;
+  width: auto;
+}
+nav:after,
+nav ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+nav a {
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #ffffff));
+  background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+  background: -o-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+  background: -ms-linear-gradient(top, #ffffff 0%, #ffffff 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+  color: #ffffff;
+  display: block;
+  font-weight: bold;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+nav ul:first-child {
+    margin-left: 16.5%;
+}
+
+nav ul {
+  list-style: none;
+  letter-spacing: 0.08em;
+}
+nav > ul > li {
+  display: inline-block;
+  float: left;
+  margin: 0;
+}
+nav.align-center {
+  text-align: center;
+}
+nav.align-center > ul > li {
+  float: none;
+}
+nav.align-center ul ul {
+  text-align: left;
+}
+nav.align-right > ul {
+  float: right;
+}
+nav.align-right ul ul {
+  text-align: right;
+}
+nav > ul > li > a {
+  color: #000000;
+  font-size: 12px;
+}
+nav > ul > li:hover:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #FECB00;
+  margin-left: -10px;
+}
+nav > ul > li:first-child > a {
+  border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+}
+nav.align-right > ul > li:first-child > a,
+nav.align-center > ul > li:first-child > a {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+}
+nav.align-right > ul > li:last-child > a {
+  border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+}
+nav > ul > li.active > a,
+nav > ul > li:hover > a {
+  color: #000;
+  /*box-shadow: inset 0 0 3px #d9d9d9;
+  -moz-box-shadow: inset 0 0 3px #d9d9d9;
+  -webkit-box-shadow: inset 0 0 3px #d9d9d9;*/
+  background: #FECB00;
+  background: -moz-linear-gradient(top, #ffffff 0%, #FECB00 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #FECB00));
+  background: -webkit-linear-gradient(top, #ffffff 0%, #FECB00 100%);
+  background: -o-linear-gradient(top, #ffffff 0%, #FECB00 100%);
+  background: -ms-linear-gradient(top, #ffffff 0%, #FECB00 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #FECB00 100%);
+}
+nav .has-sub {
+  z-index: 1;
+}
+nav .has-sub:hover > ul {
+  display: block;
+}
+nav .has-sub ul {
+  display: none;
+  position: absolute;
+  width: 200px;
+  top: 100%;
+  left: 0;
+}
+nav.align-right .has-sub ul {
+  left: auto;
+  right: 0;
+}
+nav .has-sub ul li {
+  *margin-bottom: -1px;
+}
+nav .has-sub ul li a {
+  background: #FECB00;
+  border-bottom: 1px dotted #fff;
+  font-size: 11px;
+  filter: none;
+  display: block;
+  line-height: 120%;
+  padding: 10px;
+  color: #000;
+}
+nav .has-sub ul li:hover a {
+  background: #a80008;
+}
+nav ul ul li:hover > a {
+  color: #000;
+}
+nav .has-sub .has-sub:hover > ul {
+  display: block;
+}
+nav .has-sub .has-sub ul {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+nav.align-right .has-sub .has-sub ul,
+nav.align-right ul ul ul {
+  left: auto;
+  right: 100%;
+}
+nav .has-sub .has-sub ul li a {
+  background: #a80008;
+  border-bottom: 1px dotted #ff0f1b;
+}
+nav .has-sub .has-sub ul li a:hover {
+  background: #8f0007;
+}
+nav ul ul li.last > a,
+nav ul ul li:last-child > a,
+nav ul ul ul li.last > a,
+nav ul ul ul li:last-child > a,
+nav .has-sub ul li:last-child > a,
+nav .has-sub ul li.last > a {
+  border-bottom: 0;
+}
+
+
+
+/*C O N T A I N E R*/
+
+#container {
+   width: 70%;
+   height: 100%;
+   margin-right: 15%;
+   margin-left: 15%;
+   padding-top: 1.5em;
+}
+
+.menu_title {
+   margin-left: 4%;
+}
+
+#row li {
+   float: left;
+   margin-right: 1em;
+   list-style: none;
+}
+
+#row li p {
+   text-align: center;
+}
+
+#row img {
+  display: inline-block;
+  height: auto;
+  vertical-align: middle;
+}
+
+figure { 
+  display: block; 
+  position: relative; 
+  float: left; 
+  overflow: hidden; 
+  margin: 0 9px 20px 0;
+}
+
+figcaption { 
+  position: absolute; 
+  background: rgba(0,0,0,0.75); 
+  color: #fff;
+  font-size: 14px; 
+  padding: 20px 30px; 
+  opacity: 0;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition:    all 0.6s ease;
+  -o-transition:      all 0.6s ease;
+}
+figure:hover figcaption {
+  opacity: 1;
+}
+figure:before { 
+  content: "?"; 
+  position: absolute; 
+  font-weight: 800; 
+  background: rgba(255,255,255,0.75); 
+  text-shadow: 0 0 5px white;
+  color: black;
+  width: 24px;
+  height: 24px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius:    12px;
+  border-radius:         12px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  -moz-transition: all 0.6s ease;
+  opacity: 0.75;  
+}
+figure:hover:before {
+  opacity: 0;
+}
+
+.cap-bot:before { bottom: 10px; left: 10px; }
+.cap-bot figcaption { left: 0; bottom: -30%;}
+.cap-bot:hover figcaption { bottom: 0; }
+
+
+
+img.frame {
+    /*border: 5px solid #fff;*/
+    margin-top: 20px;
+}
+
+
+/* revolver examples ------ S L I D E S H O W */
+.revolver {
+    margin: 0 auto;
+    /*border: 3px double #FECB00;*/
+    /*box-shadow: 0 0 8px rgba(0,0,0,0.9);*/
+    width: 960px;
+    height: 550px;
+    overflow: hidden;
+    position: relative;
+}
+
+.revolver.stack .slide {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.revolver.inline .slide {
+    margin: 0;
+    padding: 0;
+    position: static;
+}
+
+.revolver.reveal .slide {
+    height: 300px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 720px;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.float_right {
+    float: right;
+}
+
+
+
+.press {
+   margin-top: 100px;
+   font-size: 12px;
+   font-style: italic;
+
+   /*color: #FECB00;*/
+}
+
+a {
+   color: #FECB00;
+}
+
+    
+footer {
+   letter-spacing: 0.08em;
+   font-size: 13px;
+   text-align: center;
+   margin-top: 40px;
+   margin-bottom: 50px;
+   color: #A6A6A6;
+}
+
+footer p:last-child a {
+   text-decoration: none;
+   color: blue;
+}
+
+.btn {
+  background: #fff;
+  background-image: -webkit-linear-gradient(top, #fff, #fca800);
+  background-image: -moz-linear-gradient(top, #fff, #fca800);
+  background-image: -ms-linear-gradient(top, #fff, #fca800);
+  background-image: -o-linear-gradient(top, #fff, #fca800);
+  background-image: linear-gradient(to bottom, #fff, #fca800);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 15px;
+  font-size: 15px;
+  color: #000;
+  padding: 7px 17px 7px 17px;
+  text-decoration: none;
+  font-family: 'lora', serif;
+}
+
+.btn:hover {
+   text-decoration: none;
+   background: #3cb0fd;
+   background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+   background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+   background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+   background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+   text-decoration: none;
+   font-family: 'lora', serif; 
+}
+
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+.container {width: 960px;}
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+.container {width: 960px;}
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}

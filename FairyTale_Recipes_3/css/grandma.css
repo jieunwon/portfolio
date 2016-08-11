@@ -1,0 +1,125 @@
+body {
+   background-color: #99ccff;
+   color: #000;
+}
+
+/*START*/
+
+
+#intro {
+   display: block;
+   height: 400px;
+   left: 50%;
+   margin: -200px auto auto -325px;
+   position: absolute;
+   top: 50%;
+   width: 650px;
+}
+
+#intro h1 {
+   line-height: 120px;
+   margin: 0;
+   position: absolute;
+   text-align: center;
+   top: 130px;
+   width: 100%;
+}
+
+#intro h1 span {
+   font-size: 70px;
+   position: relative;
+}
+
+#intro .threebears {
+   bottom: -60px;
+   left: 34%;
+   margin-left: -144px;
+   position: absolute;
+}
+
+#intro .floor {
+   bottom: -15px;
+   left: 50%;
+   margin-left: -305px;
+   position: absolute;
+}
+
+#intro .sparkpoint {
+   left: 380px;
+   top: 60px;
+}
+
+#garland1 {
+   left: 0;
+   position: fixed;
+   width: 30%;
+}
+
+#garland2 {
+   right: 0;
+   position: fixed;
+   width: 30%;
+}
+
+
+
+#summary {
+   color: #000;
+   display: block;
+   font-size: 24px;
+   font-weight: bold;
+   line-height: 35px;
+   margin: 0 auto;
+   margin-bottom: 300px;
+   margin-top: 200px;
+   padding-left: 35px;
+   width: 640px;
+}
+
+#balloon1 {
+   left: 11%;
+   position: absolute;
+   top: 1600px;
+   z-index: 5;
+}
+
+#balloon2 {
+   position: absolute;
+   right: 11%;
+   top: 1600px;
+   z-index: 6;
+}
+
+#image {
+   display: block;
+   margin: 50px auto;
+   width: 100%;
+}
+
+#theend {
+   color: #000;
+   font-size: 30px;
+   font-weight: bold;
+   text-align: center;
+   width: 100%;
+}
+
+.imgDisplayoff {
+   opacity: 0;
+}
+
+#grandma_buttons {
+   display: block;
+   margin-bottom: 200px;
+   margin-left: auto;
+   margin-top: 200px;
+   margin-right: auto;
+   width: 560px;
+}
+
+#grandma_buttons ul {
+   margin: 0 auto;
+   width: 340px;
+}
+
+

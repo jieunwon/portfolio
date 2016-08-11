@@ -1,0 +1,63 @@
+body {
+   background-color: #ffadbb;
+}
+
+/*START*/
+
+
+#intro {
+   display: block;
+   height: 400px;	
+   left: 50%;
+   margin: -200px auto auto -325px;
+   position: absolute;
+   top: 50%;
+   width: 650px;
+}
+
+#intro h1 {
+   line-height: 100px;
+   margin: 0;
+   position: absolute;
+   text-align: center;
+   top: 130px;
+   width: 100%;
+}
+
+#intro h1 span {
+   font-size: 70px;
+   position: relative;
+}
+
+#intro .redhood {
+   bottom: -60px;
+   left: 34%;
+   margin-left: -144px;
+   position: absolute;
+}
+
+#intro .floor {
+   bottom: -15px;
+   left: 50%;
+   margin-left: -305px;
+   position: absolute;
+}
+
+#intro .sparkpoint {
+   left: 380px;
+   top: 60px;
+}
+
+#summary {
+   line-height: 30px;
+   margin-bottom: 300px;
+   margin-top: 20px;
+}
+
+#buttons {
+   margin-bottom: 250px;
+   margin-top: 250px;
+}
+
+
+

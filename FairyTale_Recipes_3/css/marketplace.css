@@ -1,0 +1,83 @@
+body {
+   background-color: #40D65D;
+   background: url("../assets/marketplace/market-background.png") repeat;
+   margin: 0 auto;
+}
+
+#wrapper{
+   margin: 0 auto;
+}
+
+#intro {
+   color: #000;
+   margin: 60px auto;
+}
+
+#intro h1 {
+   font-size: 38px;
+   text-align: center;
+}
+
+#intro h2 {
+   font-size: 25px;
+   margin-top: -10px;
+   text-align: center;
+}
+
+#pick {
+   color: rgba(80, 80, 80, 1);
+   font-size: 30px;
+   text-align: center;
+}
+
+#container {
+   margin: 0 auto;
+   padding-bottom: 50px;
+   padding-left: 110px;
+   padding-top: 50px;
+   width: 1100px;
+   background: rgba(100, 100, 100, 0.7);
+}
+
+#photos {
+   margin-top: -100px;
+}
+
+#recipe {
+   background: rgba(255, 255, 255, 0.7);
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 100px;
+}
+
+.makeMeDraggable { 
+   cursor: pointer;
+   display: inline-block;
+   height: 200px;
+   width: 200px;
+}
+
+#basket {
+   display: block;
+   margin: 100px auto;
+   width: 600px;
+}
+
+#market_buttons {
+   display: block;
+   margin: 0 auto;
+   margin-bottom: 200px;
+   width: 560px;
+}
+
+#market_buttons ul {
+   margin: 0 auto;
+   padding-left: 40px;
+   width: 400px;
+}
+
+#market_buttons ul li {
+   margin-left: 20px;
+}
+
