@@ -137,3 +137,5 @@
 	window.cbpScroller = cbpScroller;
 
 } )( window );
+
+
