@@ -8,47 +8,33 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 .clearfix:after { clear: both; }
 
 body {
-    font-family: 'Lato', Calibri, Arial, sans-serif;
-    /*color: #383434;*/
-	/*color: #4A8F58;*/
-	/*color: #DCA62C;*/
-	/*color: #F3F8F0;*/
+    	font-family: 'Lato', Calibri, Arial, sans-serif;
 	color: #3A696F;
-    /*background: #E1BCA9;*/
-    /*background: #FFF6BB;*/
-    /*background: #EED3BE;*/
-	/*background: #B1B2B4;*/
-	/*background: #eee;*/
 	width: 76%;
 	margin-right: 12%;
 	margin-left: 12%;
 }
 
 .container > header {
-	/*width: 93.7%;*/
-	/*max-width: 87em;*/
 	background-color: #fff;
 	height: 80px;
 	margin: 0 auto;
-	/*padding-bottom: 50px;*/
 	padding-top: 1.975em;
-    position: relative;
-    z-index: 10;
-    
+    	position: relative;
+    	z-index: 10;   
 }
 
 .outer {
 	background: #fff;
-	/*border-bottom: 1px solid #ddd;*/
 	bottom: auto;
 	-moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.3);
 	-webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.3);
 	box-shadow: 0 8px 6px -6px rgba(0,0,0,0.3);
 	height: 50px;
-    position: fixed;
-    top: 0;    
-    width: 76%;
-    z-index: 5;
+    	position: fixed;
+    	top: 0;    
+    	width: 76%;
+    	z-index: 5;
 }
 
 .outer h1 {
@@ -75,7 +61,7 @@ body {
 
 .dropdown {
 	display: inline-block;
-    position: relative;
+    	position: relative;
 }
 
 .dropdown a {
@@ -103,9 +89,9 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #00F8BD;
+    background-color: #ffffff;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
     padding: 0 10px;
     z-index: 1;
 }
