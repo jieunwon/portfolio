@@ -80,9 +80,8 @@ body {
 }
 
 .dropdown li:hover {
-	color: #fff;
+	color: #00e2ff;
 }
-
 
 
 
@@ -129,7 +128,6 @@ body {
 } 
 
 .container > header h1 {
-	/*color: #EBE7DB;*/
 	color: #3A696F;
 	font-family: 'Exo', sans-serif;
 	font-size: 2.125em;
