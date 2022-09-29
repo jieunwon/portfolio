@@ -21,8 +21,8 @@ body {
 	height: 80px;
 	margin: 0 auto;
 	padding-top: 1.975em;
-    	position: relative;
-    	z-index: 10;   
+    position: relative;
+    z-index: 10;   
 }
 
 .outer {
@@ -32,10 +32,10 @@ body {
 	-webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.3);
 	box-shadow: 0 8px 6px -6px rgba(0,0,0,0.3);
 	height: 50px;
-    	position: fixed;
-    	top: 0;    
-    	width: 76%;
-    	z-index: 5;
+    position: fixed;
+    top: 0;    
+    width: 76%;
+    z-index: 5;
 }
 
 .outer h1 {
