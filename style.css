@@ -36,7 +36,7 @@ a:visited {
   padding-left: 13px;
 }
 
-.eventname {
+.event-name {
   font-family: "Poppins", sans-serif;
   font-size: 1.4vw;
   font-weight: 700;
@@ -112,6 +112,12 @@ footer {
   text-align: center;
   font-size: 1rem;
 }
+
+footer a {
+  display: inline-block;
+  text-decoration: underline;
+  padding-bottom: 5px;
+}
 .skills-animation {
   animation: skills-animation 12s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
 }
@@ -174,14 +180,14 @@ footer {
   .works {
     width: 85%;
   }
-  .eventname {
+  .event-name {
     font-size: 1.4rem;
     margin-bottom: 10px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
-  .eventname {
+  .event-name {
     font-size: 1.4rem;
   }
   .works {
@@ -193,7 +199,7 @@ footer {
   #main-name {
     margin: 100px auto 1rem auto;
   }
-  .eventname {
+  .event-name {
     font-size: 1.2rem;
     margin-bottom: 10px;
   }
@@ -216,7 +222,7 @@ footer {
   #main-name {
     margin: 100px auto 1rem auto;
   }
-  .eventname {
+  .event-name {
     font-size: 1.2rem;
     margin-bottom: 10px;
   }
@@ -265,7 +271,7 @@ footer {
     margin: 100px auto 1rem auto;
     padding-left: 13px;
   }
-  .eventname {
+  .event-name {
     font-size: 1.1rem;
     margin-bottom: 10px;
   }
@@ -292,7 +298,7 @@ footer {
   #main-name {
     margin: 100px auto 1rem auto;
   }
-  .eventname {
+  .event-name {
     font-size: 1.2rem;
     margin-bottom: 10px;
   }
