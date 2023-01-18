@@ -1,0 +1,331 @@
+.alert-box {
+    background: rgb(74, 74, 147);
+    color: rgb(176, 198, 249);
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+}
+
+button {
+    background: green;
+}
+
+body {
+    /* background-image: url('assets/blurry-gradient-haikei.svg');
+    background-size: cover; */
+    /* background: linear-gradient(0deg, rgba(161,105,255,1) 0%, rgba(0,122,255,1) 33%, rgba(0,216,255,1) 66%, rgba(0,255,204,1) 100%); */
+    /* background-color: #FAACA8;
+    background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%); */
+    background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    /* animation: bgchange 5s infinite; */
+}    
+
+#lp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#lp1 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5vw;
+}
+
+#main-name {
+    margin: 19rem auto 20px auto; 
+    text-align: center; 
+    font-size: 3rem;
+    letter-spacing: 12px;
+    padding-left: 13px;
+}
+
+.eventname {
+    font-size: 1.4vw;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.works {
+    width: 70%;
+    margin: 20vw auto;
+    opacity: 0;
+    transition: all 1s;
+    position: relative;
+}
+
+div.works:last-child {
+    margin-bottom: 10vw;
+}
+
+.work-links {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+}
+  
+.worklist {
+    list-style-type: none;
+    margin-bottom: 100px;
+}
+.thumbnails {
+    width: 100%;
+    box-shadow: 0px 0px 20px #3b3b3b;
+}
+
+
+
+.wordCarousel {
+    font-size: 36px;
+    font-weight: 100;
+    color: #eee;
+}
+
+#skills {
+    font-size: 2.5vw;
+}
+
+#skillContainer {
+    /* margin-left: 20px; */
+    border: 2px solid white;
+    overflow: hidden;
+    position: relative;
+    /* float: right; */
+    height: 4rem;
+    padding-top: 10px;
+    margin-top: -10px;
+    text-align: center;
+}
+
+.flip5 {
+    padding: 0 10px;
+}
+
+.flip5 {
+    list-style: none;
+}
+
+#skillContainer li {
+    font-size: 2rem;
+    color: #eee;
+    font-weight: 700;
+    padding: 0 10px;
+    height: 2.85rem;
+    margin-bottom: 45px;
+    display: block;
+}
+
+footer {
+    text-align: center;
+    font-size: 1rem;    
+}
+
+.flip2 { animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip3 { animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip4 { animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip5 { animation: flip5 12s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+
+@keyframes flip2 {
+    0% { margin-top: -180px; }
+    5% { margin-top: -90px;  }
+    50% { margin-top: -90px; }
+    55% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -180px; }
+}
+
+@keyframes flip3 {
+    0% { margin-top: -270px; }
+    5% { margin-top: -180px; }
+    33% { margin-top: -180px; }
+    38% { margin-top: -90px; }
+    66% { margin-top: -90px; }
+    71% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -270px; }
+}
+
+@keyframes flip4 {
+    0% { margin-top: -360px; }
+    5% { margin-top: -270px; }
+    25% { margin-top: -270px; }
+    30% { margin-top: -180px; }
+    50% { margin-top: -180px; }
+    55% { margin-top: -90px; }
+    75% { margin-top: -90px; }
+    80% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -360px; }
+}
+
+@keyframes flip5 {
+    0% { margin-top: -450px; }
+    5% { margin-top: -360px; }
+    20% { margin-top: -360px; }
+    25% { margin-top: -270px; }
+    40% { margin-top: -270px; }
+    45% { margin-top: -180px; }
+    60% { margin-top: -180px; }
+    65% { margin-top: -90px; }
+    80% { margin-top: -90px; }
+    85% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -450px; }
+}
+
+@keyframes bgchange {
+    0% {background-color: red;}
+    50% {background-color: blue;}
+    100% {background-color: red;}
+  }
+
+  
+
+@media all and (min-width: 1024px) and (max-width: 1280px) { 
+    .works {
+        width: 85%;
+    }
+    .eventname {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .eventname {
+        font-size: 1.4rem;
+    }
+    .works {
+        width: 90%;
+    }
+ }
+
+@media all and (min-width: 480px) and (max-width: 768px) { 
+    #main-name {
+        margin: 100px auto 1rem auto; 
+    }
+    .eventname {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    #skillContainer {
+        /* height: 4rem; */
+    }
+
+    #skillContainer li {
+        /* font-size: 20px; */
+        /* padding: 0 10px; */
+        height: 3.5rem;
+        margin-bottom: 2.15rem;
+    }
+    .works {
+        width: 90%;
+    }
+}
+
+@media all and (max-width: 480px) { 
+    #main-name {
+        margin: 100px auto 1rem auto; 
+    }
+    .eventname {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    #skillContainer {
+        /* height: 4rem; */
+    }
+
+    #skillContainer li {
+        /* font-size: 20px; */
+        /* padding: 0 10px; */
+        height: 3.5rem;
+        margin-bottom: 2.15rem;
+    }
+    .works {
+        width: 90%;
+    }
+}
+
+
+/* Portrait */
+@media screen and (orientation:portrait) { /* Portrait styles here */ }
+/* Landscape */
+@media screen and (orientation:landscape) { /* Landscape styles here */ }
+
+
+/* CSS for iPhone, iPad, and Retina Displays */
+
+/* Non-Retina */
+@media screen and (-webkit-max-device-pixel-ratio: 1) {
+}
+
+/* Retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+}
+
+/* iPhone Portrait */
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+    #main-name {
+        font-size: 1.9rem;
+        letter-spacing: 10px;
+        margin: 100px auto 1rem auto; 
+        padding-left: 13px;
+    }
+    .eventname {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    #skillContainer {
+        height: 3rem;
+    }
+
+    #skillContainer li {
+        font-size: 1.3rem;
+        /* padding: 0 10px; */
+        height: 3.5rem;
+        margin-bottom: 2.15rem;
+    }
+    .flip5 {
+        padding: 0;
+    }
+    .works {
+        width: 90%;
+    }
+} 
+
+/* iPhone Landscape */
+@media screen and (max-device-width: 480px) and (orientation:landscape) {
+    #main-name {
+        margin: 100px auto 1rem auto; 
+    }
+    .eventname {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    #skillContainer {
+        /* height: 4rem; */
+    }
+
+    #skillContainer li {
+        /* font-size: 20px; */
+        /* padding: 0 10px; */
+        height: 3.5rem;
+        margin-bottom: 2.15rem;
+    }
+    .works {
+        width: 90%;
+    }
+}
+
+/* iPad Portrait */
+@media screen and (min-device-width: 481px) and (orientation:portrait) {
+}
+
+/* iPad Landscape */
+@media screen and (min-device-width: 481px) and (orientation:landscape) {
+}
