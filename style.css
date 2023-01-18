@@ -1,15 +1,3 @@
-.alert-box {
-  background: rgb(74, 74, 147);
-  color: rgb(176, 198, 249);
-  padding: 20px;
-  border-radius: 5px;
-  display: none;
-}
-
-button {
-  background: green;
-}
-
 body {
   /* background-image: url('assets/blurry-gradient-haikei.svg');
     background-size: cover; */
@@ -19,7 +7,6 @@ body {
   background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%);
   color: #ffffff;
   font-family: "Poppins", sans-serif;
-  /* animation: bgchange 5s infinite; */
 }
 
 #lp {
@@ -28,7 +15,13 @@ body {
   align-items: center;
 }
 
-#lp1 {
+a,
+a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#skills {
   display: flex;
   flex-direction: row;
   margin-bottom: 5vw;
@@ -75,7 +68,7 @@ div.works:last-child {
   box-shadow: 0px 0px 20px #3b3b3b;
 }
 
-.wordCarousel {
+.skill-carousel {
   font-size: 36px;
   font-weight: 100;
   color: #eee;
@@ -85,7 +78,7 @@ div.works:last-child {
   font-size: 2.5vw;
 }
 
-#skillContainer {
+#skill-container {
   /* margin-left: 20px; */
   border: 2px solid white;
   overflow: hidden;
@@ -97,15 +90,12 @@ div.works:last-child {
   text-align: center;
 }
 
-.flip5 {
+.skills-animation {
   padding: 0 10px;
-}
-
-.flip5 {
   list-style: none;
 }
 
-#skillContainer li {
+#skill-container li {
   font-size: 2rem;
   color: #eee;
   font-weight: 700;
@@ -116,105 +106,15 @@ div.works:last-child {
 }
 
 footer {
+  border-top: 2px solid white;
   text-align: center;
   font-size: 1rem;
 }
-
-.flip2 {
-  animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
-}
-.flip3 {
-  animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
-}
-.flip4 {
-  animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
-}
-.flip5 {
-  animation: flip5 12s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+.skills-animation {
+  animation: skills-animation 12s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
 }
 
-@keyframes flip2 {
-  0% {
-    margin-top: -180px;
-  }
-  5% {
-    margin-top: -90px;
-  }
-  50% {
-    margin-top: -90px;
-  }
-  55% {
-    margin-top: 0px;
-  }
-  99.99% {
-    margin-top: 0px;
-  }
-  100% {
-    margin-top: -180px;
-  }
-}
-
-@keyframes flip3 {
-  0% {
-    margin-top: -270px;
-  }
-  5% {
-    margin-top: -180px;
-  }
-  33% {
-    margin-top: -180px;
-  }
-  38% {
-    margin-top: -90px;
-  }
-  66% {
-    margin-top: -90px;
-  }
-  71% {
-    margin-top: 0px;
-  }
-  99.99% {
-    margin-top: 0px;
-  }
-  100% {
-    margin-top: -270px;
-  }
-}
-
-@keyframes flip4 {
-  0% {
-    margin-top: -360px;
-  }
-  5% {
-    margin-top: -270px;
-  }
-  25% {
-    margin-top: -270px;
-  }
-  30% {
-    margin-top: -180px;
-  }
-  50% {
-    margin-top: -180px;
-  }
-  55% {
-    margin-top: -90px;
-  }
-  75% {
-    margin-top: -90px;
-  }
-  80% {
-    margin-top: 0px;
-  }
-  99.99% {
-    margin-top: 0px;
-  }
-  100% {
-    margin-top: -360px;
-  }
-}
-
-@keyframes flip5 {
+@keyframes skills-animation {
   0% {
     margin-top: -450px;
   }
@@ -292,11 +192,11 @@ footer {
     font-size: 1.2rem;
     margin-bottom: 10px;
   }
-  #skillContainer {
+  #skill-container {
     /* height: 4rem; */
   }
 
-  #skillContainer li {
+  #skill-container li {
     /* font-size: 20px; */
     /* padding: 0 10px; */
     height: 3.5rem;
@@ -315,11 +215,11 @@ footer {
     font-size: 1.2rem;
     margin-bottom: 10px;
   }
-  #skillContainer {
+  #skill-container {
     /* height: 4rem; */
   }
 
-  #skillContainer li {
+  #skill-container li {
     /* font-size: 20px; */
     /* padding: 0 10px; */
     height: 3.5rem;
@@ -364,17 +264,17 @@ footer {
     font-size: 1.1rem;
     margin-bottom: 10px;
   }
-  #skillContainer {
+  #skill-container {
     height: 3rem;
   }
 
-  #skillContainer li {
+  #skill-container li {
     font-size: 1.3rem;
     /* padding: 0 10px; */
     height: 3.5rem;
     margin-bottom: 2.15rem;
   }
-  .flip5 {
+  .skills-animation {
     padding: 0;
   }
   .works {
@@ -391,11 +291,11 @@ footer {
     font-size: 1.2rem;
     margin-bottom: 10px;
   }
-  #skillContainer {
+  #skill-container {
     /* height: 4rem; */
   }
 
-  #skillContainer li {
+  #skill-container li {
     /* font-size: 20px; */
     /* padding: 0 10px; */
     height: 3.5rem;
