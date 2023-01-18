@@ -7,6 +7,7 @@ body {
   background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%);
   color: #ffffff;
   font-family: "Poppins", sans-serif;
+  font-weight: 700;
 }
 
 #lp {
@@ -36,8 +37,9 @@ a:visited {
 }
 
 .eventname {
+  font-family: "Poppins", sans-serif;
   font-size: 1.4vw;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 
@@ -70,7 +72,7 @@ div.works:last-child {
 
 .skill-carousel {
   font-size: 36px;
-  font-weight: 100;
+  font-weight: 700;
   color: #eee;
 }
 
@@ -166,6 +168,9 @@ footer {
 }
 
 @media all and (min-width: 1024px) and (max-width: 1280px) {
+  #main-name {
+    margin-top: 17rem;
+  }
   .works {
     width: 85%;
   }
