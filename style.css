@@ -65,9 +65,13 @@ div.works:last-child {
   list-style-type: none;
   margin-bottom: 100px;
 }
+
 .thumbnails {
   width: 100%;
   box-shadow: 0px 0px 20px #3b3b3b;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  opacity: 1;
 }
 
 .skill-carousel {
@@ -92,11 +96,6 @@ div.works:last-child {
   text-align: center;
 }
 
-.skills-animation {
-  padding: 0 10px;
-  list-style: none;
-}
-
 #skill-container li {
   font-size: 2rem;
   color: #eee;
@@ -105,6 +104,12 @@ div.works:last-child {
   height: 2.85rem;
   margin-bottom: 45px;
   display: block;
+}
+
+.skills-animation {
+  padding: 0 10px;
+  list-style: none;
+  animation: skills-animation 12s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
 }
 
 footer {
@@ -117,9 +122,6 @@ footer a {
   display: inline-block;
   text-decoration: underline;
   padding-bottom: 5px;
-}
-.skills-animation {
-  animation: skills-animation 12s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
 }
 
 @keyframes skills-animation {
@@ -158,18 +160,6 @@ footer a {
   }
   100% {
     margin-top: -450px;
-  }
-}
-
-@keyframes bgchange {
-  0% {
-    background-color: red;
-  }
-  50% {
-    background-color: blue;
-  }
-  100% {
-    background-color: red;
   }
 }
 
